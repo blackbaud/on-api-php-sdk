@@ -36,7 +36,7 @@ $bb = new K12Client('SchoolUrl','Username','Password');
 
 ```php
 <?php
-// Upload a publicly accessible file. The file size and type are determined by the SDK.
+// get info about the current user account using the SDK.
 try {
     $bb->get_current_user();
     print_r($bb);
@@ -44,3 +44,9 @@ try {
     echo "There was an error getting user info.\n";
 }
 ```
+
+
+
+[install-packagist]: https://packagist.org/packages/blackbaud/onsdk
+[composer]: http://getcomposer.org
+[packagist]: http://packagist.org
