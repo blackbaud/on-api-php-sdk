@@ -1,4 +1,4 @@
-<?php namespace Blackbaud\SDK;
+<?php namespace Blackbaud\onSDK;
 /**
 *
 *   This Class is for connecting to the WhippleHill Rest API.
@@ -6,7 +6,7 @@
 **/
 use Exception;
 
-class onApi  {
+class K12Client  {
     private $_apiuser;
 
     private $_apipass;

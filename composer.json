@@ -1,5 +1,5 @@
 {
-    "name": "blackbaud/sdk",
+    "name": "blackbaud/onsdk",
     "description": "PHP sdk for connecting to on api",
     "authors": [
         {
@@ -18,7 +18,7 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Blackbaud\\SDK\\": "src/"
+            "Blackbaud\\onSDK\\": "src/"
         }
     }
 }
