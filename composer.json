@@ -15,7 +15,6 @@
     "require-dev": {
 		"phpunit/phpunit": "5.2.*"
     },
-    "type": "project",
     "autoload": {
         "psr-4": {
             "Blackbaud\\onSDK\\": "src/"
