@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/blackbaud/on-api-php-sdk.svg?branch=master)](https://travis-ci.org/blackbaud/on-api-php-sdk)
+
 ## Features
 
 * Provides easy-to-use HTTP clients for all supported ON API methods and authentication
