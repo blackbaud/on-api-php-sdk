@@ -12,7 +12,7 @@
 1. **Have a Web Service API user** – Before you begin, you need to
    sign up for the onSDK and have a Manager account created.
 1. **Minimum requirements** – To run the SDK, your system will need to meet the
-   [minimum requirements][docs-requirements], including having **PHP >= 5.5**
+   [minimum requirements][docs-requirements], including having **PHP >= 5.6**
    compiled with the cURL extension and cURL 7.16.2+ compiled with a TLS
    backend (e.g., NSS or OpenSSL).
 1. **Install the SDK** – Using [Composer] is the recommended way to install the
