@@ -1,6 +1,6 @@
 ## Features
 
-* Provides easy-to-use HTTP clients for all supported onApi methods and authentication
+* Provides easy-to-use HTTP clients for all supported ON API methods and authentication
   protocols.
 * Currently built on Curl
 * Provides authentication and simple token management
@@ -26,7 +26,7 @@
 // Require the Composer autoloader.
 require 'vendor/autoload.php';
 
-use Backbaud\onSDK\K12Client;
+use Blackbaud\onSDK\K12Client;
 
 // Instantiate a Blackbaud Client.
 $bb = new K12Client('SchoolUrl','Username','Password');
