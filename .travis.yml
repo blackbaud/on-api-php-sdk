@@ -8,4 +8,4 @@ php:
   - hhvm
   - nightly
 
-install: php vendor/vendors.php
+install: composer install
