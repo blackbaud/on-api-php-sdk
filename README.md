@@ -26,10 +26,10 @@
 // Require the Composer autoloader.
 require 'vendor/autoload.php';
 
-use Blackbaud\onSDK\K12Client;
+use Blackbaud\onSDK\onApiClient;
 
 // Instantiate a Blackbaud Client.
-$bb = new K12Client('SchoolUrl','Username','Password');
+$bb = new onApiClient('SchoolUrl','Username','Password');
 ```
 
 ### Get User Info
