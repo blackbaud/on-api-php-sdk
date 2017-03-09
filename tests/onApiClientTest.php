@@ -8,7 +8,7 @@
 *
 *  @author yourname
 */
-class K12ClientTest extends PHPUnit_Framework_TestCase{
+class onApiClientTest extends PHPUnit_Framework_TestCase{
 	
   /**
   * Just check if the YourClass has no syntax error 
@@ -18,7 +18,7 @@ class K12ClientTest extends PHPUnit_Framework_TestCase{
   *
   */
   public function testIsThereAnySyntaxError(){
-	$var = new Blackbaud\onSDK\K12Client('localhost','test','test');
+	$var = new Blackbaud\onSDK\onApiClient('localhost','test','test');
 	$this->assertTrue(is_object($var));
 	unset($var);
   }
@@ -31,7 +31,7 @@ class K12ClientTest extends PHPUnit_Framework_TestCase{
   *
   */
   public function testMethod1(){
-	$var = new Blackbaud\onSDK\K12Client('localhost','test','test');
+	$var = new Blackbaud\onSDK\onApiClient('localhost','test','test');
 	$this->assertTrue($var->testing() == 'Just a test :)');
 	unset($var);
   }

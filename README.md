@@ -1,6 +1,8 @@
+[![Build Status](https://travis-ci.org/blackbaud/on-api-php-sdk.svg?branch=master)](https://travis-ci.org/blackbaud/on-api-php-sdk)
+
 ## Features
 
-* Provides easy-to-use HTTP clients for all supported onApi methods and authentication
+* Provides easy-to-use HTTP clients for all supported ON API methods and authentication
   protocols.
 * Currently built on Curl
 * Provides authentication and simple token management
@@ -10,7 +12,7 @@
 1. **Have a Web Service API user** – Before you begin, you need to
    sign up for the onSDK and have a Manager account created.
 1. **Minimum requirements** – To run the SDK, your system will need to meet the
-   [minimum requirements][docs-requirements], including having **PHP >= 5.5**
+   [minimum requirements][docs-requirements], including having **PHP >= 5.6**
    compiled with the cURL extension and cURL 7.16.2+ compiled with a TLS
    backend (e.g., NSS or OpenSSL).
 1. **Install the SDK** – Using [Composer] is the recommended way to install the
@@ -26,10 +28,10 @@
 // Require the Composer autoloader.
 require 'vendor/autoload.php';
 
-use Backbaud\onSDK\K12Client;
+use Blackbaud\onSDK\onApiClient;
 
 // Instantiate a Blackbaud Client.
-$bb = new K12Client('SchoolUrl','Username','Password');
+$bb = new onApiClient('SchoolUrl','Username','Password');
 ```
 
 ### Get User Info

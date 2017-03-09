@@ -6,7 +6,7 @@
 **/
 use Exception;
 
-class K12Client  {
+class onApiClient  {
     private $_apiuser;
 
     private $_apipass;
