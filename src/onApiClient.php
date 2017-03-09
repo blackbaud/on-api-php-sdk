@@ -197,6 +197,10 @@ class onApiClient  {
         return json_decode( $this->getUrl( $this->_api . $method . $this->format_options( $url_params ) , $putdata, false, 'PUT' )  );
     }
 
+    function post_api( $method , $url_params = array() , $postdate = array() ){
+
+        return json_decode( $this->getUrl( $this->_api . $method . $this->format_options( $url_params ) , $postdate, false, 'PUT' )  );
+    }
     function get_api( $method , $params = array() ){
         return json_decode( $this->getUrl( $this->_api . $method . $this->format_options( $params ) )  );
     }
@@ -254,7 +258,7 @@ class onApiClient  {
 
             $sPost = http_build_query($aPost);    
 
-            $aHeader[] = 'Content-type: application/x-www-form-urlencoded';
+            $aHeader[] = 'Content-type: application/json';
 
             $aHeader[] = 'Content-Length: ' . strlen($sPost);
 
@@ -266,7 +270,7 @@ class onApiClient  {
 
             //$sPost = http_build_query($aPost);    
             $sPost = json_encode($aPost);
-            $aHeader[] = 'Content-type: application/x-www-form-urlencoded';
+            $aHeader[] = 'Content-type: application/json';
 
             $aHeader[] = 'Content-Length: ' . strlen($sPost);
 
@@ -293,15 +297,15 @@ class onApiClient  {
 
             curl_setopt($rRequest, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($rRequest, CURLOPT_SSL_VERIFYPEER, false);
-
+            
             if ($sMethod == 'POST'){
 
                 curl_setopt($rRequest, CURLOPT_POST, 1); 
-                curl_setopt($rRequest, CURLOPT_POSTFIELDS, $aPost); 
+                curl_setopt($rRequest, CURLOPT_POSTFIELDS, $sContent);
 
             } elseif ($sMethod == 'PUT'){
                 curl_setopt($rRequest, CURLOPT_CUSTOMREQUEST, "PUT");
-                curl_setopt($rRequest, CURLOPT_POSTFIELDS, $sPost); 
+                curl_setopt($rRequest, CURLOPT_POSTFIELDS, $sContent);
 
             }
             else {
