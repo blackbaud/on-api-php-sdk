@@ -199,7 +199,7 @@ class onApiClient  {
 
     function post_api( $method , $url_params = array() , $postdate = array() ){
 
-        return json_decode( $this->getUrl( $this->_api . $method . $this->format_options( $url_params ) , $postdate, false, 'PUT' )  );
+        return json_decode( $this->getUrl( $this->_api . $method . $this->format_options( $url_params ) , $postdate, false, 'POST' )  );
     }
     function get_api( $method , $params = array() ){
         return json_decode( $this->getUrl( $this->_api . $method . $this->format_options( $params ) )  );
