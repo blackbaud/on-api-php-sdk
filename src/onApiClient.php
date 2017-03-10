@@ -1,7 +1,7 @@
 <?php namespace Blackbaud\onSDK;
 /**
 *
-*   This Class is for connecting to the WhippleHill Rest API.
+*   This Class is for connecting to the Blackbaud K12 ON API.
 *
 **/
 use Exception;
@@ -193,14 +193,13 @@ class onApiClient  {
 
 
     function put_api( $method , $url_params = array() , $putdata = array() ){
-
         return json_decode( $this->getUrl( $this->_api . $method . $this->format_options( $url_params ) , $putdata, false, 'PUT' )  );
     }
 
-    function post_api( $method , $url_params = array() , $postdate = array() ){
-
-        return json_decode( $this->getUrl( $this->_api . $method . $this->format_options( $url_params ) , $postdate, false, 'POST' )  );
+    function post_api( $method , $url_params = array() , $postdata = array() ){
+      return json_decode( $this->getUrl( $this->_api . $method . $this->format_options( $url_params ) , $postdata, false, 'POST' )  );
     }
+
     function get_api( $method , $params = array() ){
         return json_decode( $this->getUrl( $this->_api . $method . $this->format_options( $params ) )  );
     }
@@ -233,7 +232,7 @@ class onApiClient  {
     /**
     * Get data from given URL
     * Uses Curl if installed, falls back to file_get_contents if not
-    * 
+    *
     * @param string $sUrl
     * @param array $aPost
     * @param array $aHeader
@@ -253,22 +252,22 @@ class onApiClient  {
 
             // build POST query
 
-            $sPost = json_encode($aPost);   
-            $sMethod = 'POST'; 
+            $sPost = json_encode($aPost);
+            $sMethod = 'POST';
 
-            $sPost = http_build_query($aPost);    
+            // $sPost = http_build_query($sPost);
 
-            $aHeader[] = 'Content-type: application/json';
+            $aHeader[] = "Content-Type: application/json; charset=utf-8";
 
-            $aHeader[] = 'Content-Length: ' . strlen($sPost);
+            // $aHeader[] = 'Content-Length: ' . strlen($sPost);
 
             $sContent = $aPost;
 
         } elseif (count($aPost) > 0 && $method =='PUT'){
-            
-            $sMethod = 'PUT'; 
 
-            //$sPost = http_build_query($aPost);    
+            $sMethod = 'PUT';
+
+            //$sPost = http_build_query($aPost);
             $sPost = json_encode($aPost);
             $aHeader[] = 'Content-type: application/json';
 
@@ -297,13 +296,16 @@ class onApiClient  {
 
             curl_setopt($rRequest, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($rRequest, CURLOPT_SSL_VERIFYPEER, false);
-            
+
             if ($sMethod == 'POST'){
 
-                curl_setopt($rRequest, CURLOPT_POST, 1); 
+                curl_setopt($rRequest, CURLOPT_POST, 1);
                 curl_setopt($rRequest, CURLOPT_POSTFIELDS, $sContent);
+                curl_setopt($rRequest, CURLOPT_HTTPHEADER, $aHeader);
 
-            } elseif ($sMethod == 'PUT'){
+            }
+            elseif ($sMethod == 'PUT'){
+
                 curl_setopt($rRequest, CURLOPT_CUSTOMREQUEST, "PUT");
                 curl_setopt($rRequest, CURLOPT_POSTFIELDS, $sContent);
 
