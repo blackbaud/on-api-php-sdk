@@ -92,13 +92,21 @@ class onApiClient  {
         if($this->_token && $re_auth == false){
             return;
         }
+        $post_params = array(
+            'username'=>$this->_apiuser.username,
+            'password'=>$this->_apiuser.password
+        );
 
-         $vendor = "";
+        $vendor = "";
         if($this->_vendor !== false){
-            $vendor = "&vendorkey=".$this->_vendor;
+           // $vendor = "&vendorkey=".$this->_vendor;
+            $post_params['vendorkey'] => $this->_vendor;
         }
 
-        $data = $this->getUrl($this->_api."authentication/login?username=".$this->_apiuser."&password=".$this->_apipass."&format=json".$vendor );
+
+
+
+        $data = $this->getUrl( $this->_api . "authentication/login" , $post_params , false , "POST" );
         $data = json_decode($data);
         if(isset($data->Token)){
             $this->_token = $data->Token;
