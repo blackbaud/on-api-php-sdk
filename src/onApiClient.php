@@ -100,7 +100,7 @@ class onApiClient  {
         $vendor = "";
         if($this->_vendor !== false){
            // $vendor = "&vendorkey=".$this->_vendor;
-            $post_params['vendorkey'] => $this->_vendor;
+            $post_params['vendorkey'] = $this->_vendor;
         }
 
 
