@@ -76,13 +76,6 @@ class onApiClient  {
         $this->_screen = true;
     }
 
-
-    function signin($username, $password){
-        $data = $this->getUrl($this->_api."signin",  array('username'=>$username ,'password'=>$password )  );
-        $data = json_decode($data);
-        return $data;
-    }
-
     public function reAuth(){
         $this->auth(true);
     }
