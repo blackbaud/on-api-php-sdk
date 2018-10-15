@@ -93,8 +93,8 @@ class onApiClient  {
             return;
         }
         $post_params = array(
-            'username'=>$this->_apiuser.username,
-            'password'=>$this->_apiuser.password
+            'username'=>$this->_apiuser,
+            'password'=>$this->_apipass
         );
 
         $vendor = "";
