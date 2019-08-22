@@ -301,14 +301,14 @@ class onApiClient  {
             if ($sMethod == 'POST'){
 
                 curl_setopt($rRequest, CURLOPT_POST, 1);
-                curl_setopt($rRequest, CURLOPT_POSTFIELDS, $sContent);
+                curl_setopt($rRequest, CURLOPT_POSTFIELDS, json_encode( $sContent ));
                 curl_setopt($rRequest, CURLOPT_HTTPHEADER, $aHeader);
 
             }
             elseif ($sMethod == 'PUT'){
 
                 curl_setopt($rRequest, CURLOPT_CUSTOMREQUEST, "PUT");
-                curl_setopt($rRequest, CURLOPT_POSTFIELDS, $sContent);
+                curl_setopt($rRequest, CURLOPT_POSTFIELDS, json_encode( $sContent ));
 
             }
             else {
