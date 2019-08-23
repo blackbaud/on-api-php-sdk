@@ -1,5 +1,13 @@
 <?php 
 
+
+class ApiTester extends Blackbaud\onSDK\onApiClient {
+    function auth(){
+        return array();
+    }
+}
+
+
 /**
 *  Corresponding Class to test YourClass class
 *
@@ -18,7 +26,7 @@ class onApiClientTest extends PHPUnit_Framework_TestCase{
   *
   */
   public function testIsThereAnySyntaxError(){
-	$var = new Blackbaud\onSDK\onApiClient('localhost','test','test');
+	$var = new ApiTester('localhost','test','test');
 	$this->assertTrue(is_object($var));
 	unset($var);
   }
@@ -31,7 +39,7 @@ class onApiClientTest extends PHPUnit_Framework_TestCase{
   *
   */
   public function testMethod1(){
-	$var = new Blackbaud\onSDK\onApiClient('localhost','test','test');
+	$var = new ApiTester('localhost','test','test');
 	$this->assertTrue($var->testing() == 'Just a test :)');
 	unset($var);
   }
