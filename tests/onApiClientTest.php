@@ -2,9 +2,7 @@
 
 
 class ApiTester extends Blackbaud\onSDK\onApiClient {
-    function auth(){
-        return array();
-    }
+     protected function auth( $re_auth = false ){}
 }
 
 

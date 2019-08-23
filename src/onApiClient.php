@@ -80,7 +80,7 @@ class onApiClient  {
         $this->auth(true);
     }
 
-    private function auth( $re_auth = false ){
+    protected function auth( $re_auth = false ){
 
         if($this->_token && $re_auth == false){
             return;
