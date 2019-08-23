@@ -189,3 +189,4 @@ pip-log.txt
 *.sublime-workspace
 
 /vendor/
+.idea/workspace.xml

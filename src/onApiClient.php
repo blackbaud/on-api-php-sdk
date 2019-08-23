@@ -57,7 +57,7 @@ class onApiClient  {
         if($this->option('debug')){
             $this->debug_mode();
         }
-
+        $this->auth();
         //$this->_bUseCache = false;
        
        

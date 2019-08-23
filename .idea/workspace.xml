@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="54cf7550-6b13-47fd-ad72-6694fd665a69" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/onApiClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/onApiClient.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +60,8 @@
       <option name="presentableId" value="Default" />
       <updated>1566501703095</updated>
       <workItem from="1566501704556" duration="1776000" />
-      <workItem from="1566523211517" duration="553000" />
+      <workItem from="1566523211517" duration="1585000" />
+      <workItem from="1566565901253" duration="23000" />
     </task>
     <servers />
   </component>
