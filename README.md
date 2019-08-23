@@ -40,8 +40,8 @@ $bb = new onApiClient('SchoolUrl','Username','Password');
 <?php
 // get info about the current user account using the SDK.
 try {
-    $bb->get_current_user();
-    print_r($bb);
+    $user = $bb->get_current_user();
+    print_r($user);
 } catch (Exception $e) {
     echo "There was an error getting user info.\n";
 }
